@@ -1,36 +1,21 @@
-# Car Rental Reservation System Backend
+# Tech Tips & Tricks Hub - Backend
 
-This repository contains the backend implementation for a Car Rental Reservation System, built using TypeScript, Express.js, and MongoDB with Mongoose ODM.
+## Directory Structure
 
-## Features
+## Important Libraries/Frameworks
 
-- **Authentication & Authorization**
-  - User signup and login with JWT authentication.
-  - Role-based access control (admin and user roles).
+- Node.js
+- Express.js
+- Mongoose (for MongoDB interaction)
+- bcrypt (for password hashing)
+- jsonwebtoken (for JWT authentication)
+- dotenv (for environment variable management)
+- cors (for handling Cross-Origin Resource Sharing)
 
-- **Car Management**
-  - Create, read, update, and delete cars (soft delete).
-  - List all cars and get details of a specific car.
-  - Admin-exclusive functionality.
+## Setup Instructions
 
-- **Booking Management**
-  - Users can book cars for specific dates and times.
-  - Admins can view all bookings, calculate total costs, and mark bookings as returned.
-
-- **Error Handling**
-  - Centralized error handling with descriptive error messages.
-  - Differentiates between validation errors, duplicate entries, and other errors.
-
-- **Transaction & Rollback**
-  - Ensures data integrity during critical operations like booking and returning cars.
-
-- **RESTful API**
-  - Well-defined API endpoints for seamless interaction.
-  - Includes query parameters and request body specifications.
-
-## Technology Stack
-
-- **TypeScript**: Language used for development.
-- **Express.js**: Web framework for building APIs.
-- **MongoDB**: Database for storing application data.
-- **Mongoose**: ODM library for MongoDB and data validation.
+1. Clone the repository.
+2. Navigate to the `/backend` directory.
+3. Install dependencies: `npm install`.
+4. Set up environment variables in `.env`.
+5. Run the application: `node server.js`.
