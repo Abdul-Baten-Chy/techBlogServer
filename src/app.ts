@@ -8,9 +8,9 @@ import notFoundApi from './midleware/notFoundApi';
 const app: Application = express();
 app.use(cookieParser());
 
-//parser
+//parser https://frontend-ivory-delta-48.vercel.app
 const corsOptions = {
-  origin: 'https://frontend-ivory-delta-48.vercel.app',
+  origin: 'http://localhost:3000',
   credentials: true,
 };
 

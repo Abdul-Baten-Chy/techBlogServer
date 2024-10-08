@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { commentsRouter } from '../modules/comments/comments.route';
+import { paymentRouter } from '../modules/payments/payment.route';
 import { postRoute } from '../modules/posts/posts.route';
 import { userRouter } from '../modules/user/user.router';
 
@@ -17,6 +18,10 @@ const appRouter = [
   {
     path: '/posts',
     route: postRoute,
+  },
+  {
+    path: '/pay',
+    route: paymentRouter,
   },
 ];
 

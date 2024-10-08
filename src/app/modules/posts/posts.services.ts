@@ -1,4 +1,3 @@
-import { ObjectId } from 'mongoose';
 import TPost from './posts.interface';
 import { Post } from './posts.model';
 
@@ -43,7 +42,7 @@ const increasedownVoteInDB = async (payload: { postId: string }) => {
 const getAllPostsFromDB = async () => {
   return await Post.find().populate('author').exec();
 };
-const getSinglePostFromDB = async (id: ObjectId) => {
+const getSinglePostFromDB = async (id: string) => {
   return await Post.findById(id)
     .populate('author')
     .populate({

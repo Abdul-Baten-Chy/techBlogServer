@@ -3,9 +3,8 @@ import { Model, Types } from 'mongoose';
 export interface Tuser {
   email: string;
   password: string;
-  role: {
-    type: string;
-  };
+  role: string;
+
   verified: boolean;
   profile: {
     name: string;
