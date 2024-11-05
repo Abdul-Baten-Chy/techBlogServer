@@ -66,6 +66,18 @@ const getSinglePost = async (req: Request, res: Response) => {
     data: result,
   });
 };
+const deletePost = async (req: Request, res: Response) => {
+  const { id } = req.params;
+  console.log(id);
+
+  const result = await postService.deletepostFromDB(id);
+  return sendResponse(res, {
+    success: true,
+    statusCode: 200,
+    message: 'Post retrieved successfully',
+    data: result,
+  });
+};
 
 // const getMybookings = catchAsyncAwait(async (req: Request, res: Response) => {
 //   const token = req?.headers?.authorization?.split(' ')[1] as string;
@@ -101,4 +113,5 @@ export const postController = {
   increasedownVotes,
   getAllPosts,
   getSinglePost,
+  deletePost,
 };

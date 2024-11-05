@@ -11,9 +11,9 @@ const stripe = new Stripe(
 const paymentIntent = catchAsyncAwait(async (req: Request, res: Response) => {
   console.log('up', req.body);
 
-  const { amount } = req.body;
-  const amountParse = parseInt(amount);
-  console.log(amountParse, 'amount inside the intent');
+  const amount = parseInt(req.body.amount) * 100;
+
+  console.log(amount, 'amount inside the intent');
 
   const paymentIntent = await stripe.paymentIntents.create({
     amount: amount,

@@ -54,6 +54,9 @@ const getSinglePostFromDB = async (id: string) => {
     })
     .exec();
 };
+const deletepostFromDB = async (id: string) => {
+  return await Post.findByIdAndDelete(id);
+};
 // const getMyBookingFromDb = async (userEmail: string) => {
 //   const user = await User.findOne({ email: userEmail });
 //   let userId;
@@ -75,4 +78,5 @@ export const postService = {
   increasedownVoteInDB,
   getAllPostsFromDB,
   getSinglePostFromDB,
+  deletepostFromDB,
 };
